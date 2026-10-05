@@ -2,39 +2,50 @@
 
 import React from 'react';
 
-interface UiverseDownloadButtonProps {
-  href: string;
+interface UiverseExploreButtonProps {
+  onClick?: () => void;
   text: string;
-  title?: string;
 }
 
-export function UiverseDownloadButton({ href, text, title }: UiverseDownloadButtonProps) {
+export function UiverseExploreButton({ onClick, text }: UiverseExploreButtonProps) {
   return (
-    <a
-      id="hero-drive-cv-btn"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={title}
-      className="group relative inline-flex items-center h-[46px] min-w-[175px] max-w-full rounded-xl overflow-hidden border border-blue-600 dark:border-blue-500 bg-blue-600 dark:bg-blue-600 cursor-pointer shadow-sm hover:bg-blue-700 dark:hover:bg-blue-700 active:border-blue-800 transition-all duration-300 select-none"
+    <button
+      id="hero-projects-btn"
+      type="button"
+      onClick={onClick}
+      className="group relative inline-flex items-center justify-center gap-2.5 h-[46px] px-5 py-3 rounded-xl bg-neutral-900 hover:bg-blue-600 dark:bg-neutral-800 dark:hover:bg-blue-600 text-white font-medium text-sm transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md select-none border border-neutral-300 dark:border-neutral-700 hover:border-blue-600 dark:hover:border-blue-500"
     >
-      {/* Text: slides left slightly and fades out on hover */}
-      <span className="w-full pl-4 pr-12 text-sm font-semibold text-white whitespace-nowrap transition-all duration-300 group-hover:text-transparent group-hover:opacity-0 group-hover:-translate-x-2">
-        {text}
-      </span>
-
-      {/* Sliding Icon Container: covers full button on hover */}
-      <span className="absolute right-0 top-0 bottom-0 w-[42px] bg-blue-700 dark:bg-blue-700 group-hover:w-full group-active:bg-blue-800 flex items-center justify-center transition-all duration-300">
+      {/* Icon Circle Wrapper */}
+      <span className="relative flex-shrink-0 w-5 h-5 rounded-full bg-white text-neutral-900 group-hover:text-blue-600 flex items-center justify-center overflow-hidden transition-colors duration-300">
+        {/* First Arrow: exits top-right on hover */}
         <svg
+          viewBox="0 0 14 15"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 35 35"
-          className="w-5 h-5 fill-white transition-transform duration-300 group-hover:scale-110"
+          className="w-2.5 h-2.5 fill-current transition-transform duration-300 ease-in-out group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"
         >
-          <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z" />
-          <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z" />
-          <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z" />
+          <path
+            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            fill="currentColor"
+          />
+        </svg>
+
+        {/* Second Arrow (Copy): enters from bottom-left on hover */}
+        <svg
+          viewBox="0 0 14 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-2.5 h-2.5 fill-current absolute -translate-x-[150%] translate-y-[150%] transition-transform duration-300 ease-in-out delay-75 group-hover:translate-x-0 group-hover:translate-y-0"
+        >
+          <path
+            d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            fill="currentColor"
+          />
         </svg>
       </span>
-    </a>
+
+      {/* Button Label */}
+      <span>{text}</span>
+    </button>
   );
 }

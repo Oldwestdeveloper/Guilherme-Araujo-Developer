@@ -21,6 +21,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { getPersonalInfo } from '@/data/portfolio-data';
 import { UI_TRANSLATIONS } from '@/data/translations';
 import { UiverseDownloadButton } from '@/components/ui/UiverseDownloadButton';
+import { UiverseExploreButton } from '@/components/ui/UiverseExploreButton';
 
 export function Hero() {
   const { language } = useLanguage();
@@ -132,15 +133,10 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-3.5 w-full sm:w-auto">
-              <button
-                id="hero-projects-btn"
-                type="button"
+              <UiverseExploreButton
                 onClick={() => handleScrollTo('projects')}
-                className="px-6 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-100 font-medium text-sm transition-all border border-neutral-300 dark:border-neutral-700 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>{t.exploreProjects}</span>
-                <ArrowDown className="w-4 h-4" />
-              </button>
+                text={t.exploreProjects}
+              />
 
               <button
                 id="hero-contact-btn"
