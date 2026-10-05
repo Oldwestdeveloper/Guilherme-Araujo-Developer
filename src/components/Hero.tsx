@@ -20,6 +20,7 @@ import {
 import { useLanguage } from '@/context/LanguageContext';
 import { getPersonalInfo } from '@/data/portfolio-data';
 import { UI_TRANSLATIONS } from '@/data/translations';
+import { UiverseDownloadButton } from '@/components/ui/UiverseDownloadButton';
 
 export function Hero() {
   const { language } = useLanguage();
@@ -135,7 +136,7 @@ export function Hero() {
                 id="hero-projects-btn"
                 type="button"
                 onClick={() => handleScrollTo('projects')}
-                className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 cursor-pointer"
+                className="px-6 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-100 font-medium text-sm transition-all border border-neutral-300 dark:border-neutral-700 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>{t.exploreProjects}</span>
                 <ArrowDown className="w-4 h-4" />
@@ -151,18 +152,11 @@ export function Hero() {
                 <span>{t.getInTouch}</span>
               </button>
 
-              <a
-                id="hero-drive-cv-btn"
+              <UiverseDownloadButton
                 href={personalInfo.resumeDriveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 font-medium text-sm transition-all border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-center gap-2 cursor-pointer shadow-xs hover:border-neutral-300 dark:hover:border-neutral-600"
+                text={t.downloadCv}
                 title={t.downloadCvTitle}
-              >
-                <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                <span>{t.downloadCv}</span>
-                <ExternalLink className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />
-              </a>
+              />
             </div>
 
             {/* Social Links */}
