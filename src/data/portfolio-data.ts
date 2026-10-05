@@ -401,7 +401,7 @@ export const CERTIFICATIONS_PT: Certification[] = [
     issuer: 'Sujeito Programador',
     issueDate: 'Inicio: 2026',
     status: 'Em andamento',
-    // credentialUrl: 'https://github.com/Oldwestdeveloper',
+    credentialUrl: 'https://github.com/Oldwestdeveloper',
   },
   // {
   //   id: 'cert-2',
@@ -428,7 +428,7 @@ export const CERTIFICATIONS_EN: Certification[] = [
     issuer: 'Subject Programmer',
     issueDate: 'Start: 2026',
     status: 'In Progress',
-    // credentialUrl: 'https://github.com/Oldwestdeveloper',
+    credentialUrl: 'https://github.com/Oldwestdeveloper',
   },
   // {
   //   id: 'cert-2',
@@ -455,7 +455,7 @@ export const TESTIMONIALS_PT: Testimonial[] = [
     role: 'Chefe da Seção de Segurança',
     company: 'TRE-PR',
     avatar:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
+      'https://lh3.googleusercontent.com/a-/ALV-UjXmJunjE4xF5nGyiw5GPrblT9RGJgu-Q3wWXS4Ycd6o3QTpq7uF=s240-p-k-rw-no',
     content:
       'Extremamente proativo e com forte visão de negócio. O Guilherme identificou um gargalo no nosso fluxo e desenvolveu do zero uma solução full-stack que digitalizou toda a gestão de credenciais. A automação que ele estruturou eliminou os processos manuais e reduziu drasticamente o nosso tempo gasto com suporte.',
     rating: 5,
@@ -470,7 +470,7 @@ export const TESTIMONIALS_EN: Testimonial[] = [
     role: 'Head of Institutional Security',
     company: 'TRE-PR',
     avatar:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
+      'https://lh3.googleusercontent.com/a-/ALV-UjXmJunjE4xF5nGyiw5GPrblT9RGJgu-Q3wWXS4Ycd6o3QTpq7uF=s240-p-k-rw-no',
     content:
       'Extremely proactive with a strong business vision. Guilherme identified a bottleneck in our workflow and built a full-stack solution from scratch that completely digitized our credential management. The automation he structured eliminated manual processes and drastically reduced the time we spent on support.',
     rating: 5,
