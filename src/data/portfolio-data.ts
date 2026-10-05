@@ -467,7 +467,7 @@ export const TESTIMONIALS_EN: Testimonial[] = [
 {
     id: 'test-1',
     name: 'Institutional Security and Intelligence Section',
-    role: 'Head of Institutional Security',
+    role: 'Head of the Security Section',
     company: 'TRE-PR',
     avatar:
       'https://lh3.googleusercontent.com/a-/ALV-UjXmJunjE4xF5nGyiw5GPrblT9RGJgu-Q3wWXS4Ycd6o3QTpq7uF=s240-p-k-rw-no',
