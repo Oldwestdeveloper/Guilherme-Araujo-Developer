@@ -5,8 +5,6 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import {
   ArrowDown,
-  Github,
-  Linkedin,
   Mail,
   MapPin,
   Code2,
@@ -22,6 +20,7 @@ import { getPersonalInfo } from '@/data/portfolio-data';
 import { UI_TRANSLATIONS } from '@/data/translations';
 import { UiverseDownloadButton } from '@/components/ui/UiverseDownloadButton';
 import { UiverseExploreButton } from '@/components/ui/UiverseExploreButton';
+import { UiverseConnectTooltip } from '@/components/ui/UiverseConnectTooltip';
 
 export function Hero() {
   const { language } = useLanguage();
@@ -155,39 +154,14 @@ export function Hero() {
               />
             </div>
 
-            {/* Social Links */}
-            <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800/80 flex items-center gap-4">
-              <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
-                {t.connect}
-              </span>
-              <a
-                id="hero-social-github"
-                href={personalInfo.github}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-white dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700/60 text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
-                aria-label="GitHub Profile"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                id="hero-social-linkedin"
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-white dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700/60 text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                id="hero-social-email"
-                href={`mailto:${personalInfo.email}`}
-                className="p-2.5 rounded-xl bg-white dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700/60 text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
-                aria-label="Send Email"
-              >
-                <Mail className="w-4 h-4" />
-              </a>
+            {/* Social Links / Connect Tooltip */}
+            <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800/80 flex items-center">
+              <UiverseConnectTooltip
+                label={t.connect}
+                githubUrl={personalInfo.github}
+                linkedinUrl={personalInfo.linkedin}
+                email={personalInfo.email}
+              />
             </div>
           </motion.div>
 
