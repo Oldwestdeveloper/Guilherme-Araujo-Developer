@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { getPersonalInfo } from '@/data/portfolio-data';
 import { UI_TRANSLATIONS } from '@/data/translations';
+import { UiverseConnectTooltip } from '@/components/ui/UiverseConnectTooltip';
 
 export function Footer() {
   const { language } = useLanguage();
@@ -92,38 +93,16 @@ export function Footer() {
         </div>
 
         {/* Bottom copyright and socials */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500 dark:text-neutral-400">
           <p>
             &copy; {new Date().getFullYear()} {personalInfo.name}. {t.allRightsReserved}
           </p>
 
-          <div className="flex items-center gap-4">
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-neutral-900 dark:hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-4 h-4" />
-            </a>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-neutral-900 dark:hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="hover:text-neutral-900 dark:hover:text-white transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-4 h-4" />
-            </a>
-          </div>
+          <UiverseConnectTooltip
+            githubUrl={personalInfo.github}
+            linkedinUrl={personalInfo.linkedin}
+            email={personalInfo.email}
+          />
 
           <p className="flex items-center gap-1 text-[11px]">
             <span>{t.builtWith}</span>
