@@ -33,8 +33,8 @@ export const UI_TRANSLATIONS = {
     },
     hero: {
       status: 'Disponível para oportunidades como Desenvolvedor Júnior',
-      titlePrefix: 'Desenvolvedor Full Stack Júnior e ',
-      titleHighlight: 'Analista de Sistemas',
+      titlePrefix: 'Analista de Sistemas e ',
+      titleHighlight: 'Desenvolvedor Full Stack Júnior', 
       bioGreeting: 'Olá! Sou',
       bioText:
         'formado em Análise e Desenvolvimento de Sistemas pela UniDomBosco. Desenvolvo aplicações web modernas, eficientes e bem estruturadas com React, Next.js, Node.js, NestJS e bancos relacionais PostgreSQL e MySQL.',
@@ -204,8 +204,8 @@ export const UI_TRANSLATIONS = {
     },
     hero: {
       status: 'Available for Junior Developer roles and opportunities',
-      titlePrefix: 'Junior Full Stack Developer and ',
-      titleHighlight: 'Systems Analysis',
+      titlePrefix: 'Systems Analysis and ',
+      titleHighlight: 'Junior Full Stack Developer',
       bioGreeting: 'Hello! I am',
       bioText:
         'with a degree in Systems Analysis and Development from UniDomBosco. I build modern, resilient, and high-performance web applications using React, Next.js, Node.js, NestJS, and relational databases like PostgreSQL and MySQL.',
