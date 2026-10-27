@@ -34,7 +34,7 @@ export const UI_TRANSLATIONS = {
     hero: {
       status: 'Disponível para oportunidades como Desenvolvedor Júnior',
       titlePrefix: 'Desenvolvedor Full Stack Júnior e ',
-      titleHighlight: 'Graduado em ADS',
+      titleHighlight: 'Graduado em Análise e Desenvolvimento de Sistemas',
       bioGreeting: 'Olá! Sou',
       bioText:
         'formado em Análise e Desenvolvimento de Sistemas pela UniDomBosco. Desenvolvo aplicações web modernas, eficientes e bem estruturadas com React, Next.js, Node.js, NestJS e bancos relacionais PostgreSQL e MySQL.',
